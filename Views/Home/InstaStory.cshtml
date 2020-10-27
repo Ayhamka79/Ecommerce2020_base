@@ -1,0 +1,46 @@
+﻿@model List<Item>;
+
+@{ Layout = ""; }
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Stories</title>
+
+    <link href="~/css/inststyle.css" rel="stylesheet" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://www.cssscript.com/demo/sticky.css" rel="stylesheet" type="text/css">
+</head>
+
+<body style="background-color:black">
+
+
+    <div data-slide="slide" class="slide">
+        <div class="slide-items">
+
+            @foreach (var item in Model)
+            {
+                var photopath = "/Images/" + (item.Photopath ?? "noimage.jpg");
+
+                <img src="@photopath" style="width:700px;height:600px"alt="Img 1">
+
+                @*<p>@item.ItemName</p>*@
+
+            }
+            </div>
+        <nav class="slide-nav">
+            <div class="slide-thumb"></div>
+            <button class="slide-prev">Prev</button>
+            <button class="slide-next">Next</button>
+        </nav>
+    </div>
+    <a asp-action="index" class="btn btn-danger" style="margin-bottom:50px"> Return Home</a>
+    <script src="~/js/slide-stories.js"></script>
+</body>
+
+</html>
+

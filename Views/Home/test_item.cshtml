@@ -1,0 +1,83 @@
+﻿
+<br />
+<br />
+<br />
+<link href="~/css/swiper-bundle.min.css" rel="stylesheet" />
+
+<div style=" background-image:url(~/images/hero_1.jpg)" ;
+     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+     font-size: 14px;
+     color: #000;
+     margin: 0;
+     display:flex;
+     justify-content:center;
+     align-items:center;
+     min-height:100vh;
+     background:#111;">
+
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"> <img src="~/images/person_2.jpg" style="width:250px;height:250px" /></div>
+            <div class="swiper-slide"> <img src="~/images/person_2.jpg" style="width:250px;height:250px" /></div>
+            <div class="swiper-slide"> <img src="~/images/person_2.jpg" style="width:250px;height:250px" /></div>
+            <div class="swiper-slide"> <img src="~/images/person_2.jpg" style="width:250px;height:250px" /></div>
+            <div class="swiper-slide"> <img src="~/images/person_2.jpg" style="width:250px;height:250px" /></div>
+            <div class="swiper-slide"> <img src="~/images/person_2.jpg" style="width:250px;height:250px" /></div>
+            <div class="swiper-slide"> <img src="~/images/person_2.jpg" style="width:250px;height:250px" /></div>
+            <div class="swiper-slide"> <img src="~/images/person_2.jpg" style="width:250px;height:250px" /></div>
+
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="../package/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+</div>
+
+<style>
+
+    .swiper-container {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 100px;
+    }
+
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 250px;
+        height: 250px;
+        background: #000;
+        -webkit-box-reflect: below 1px linear-gradient(transparent,transparent,#0006);
+    }
+</style>
+<script src="~/js/swiper-bundle.min.js"></script>
+@section Scripts {
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 20,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: true,
+            },
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    </script>
+}
